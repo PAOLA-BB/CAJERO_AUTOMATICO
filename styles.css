@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    color: white;
+    border-bottom: 100px solid rgb(3, 50, 77);
+    border-top: 100px solid  rgb(3, 50, 77);
+    background-color: black;
+   text-align: center;
+}
+
+header {
+    display:inline-block;
+    margin-top: 60px;
+}
+
+#seccion1 {
+    margin: 20px;
+}
+
+#seccion2 {
+    margin: 20px;
+}
+
+#seccion3 {
+    margin: 20px;
+}
+
+button {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+#tipoDoc {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+}

@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CAJERO</title>
+</head>
+
+<body>
+    <header>
+        <h1>BIENVENIDO</h1>
+        <h2>Identificación</h2> 
+    </header>
+    <section id="seccion1">
+        <select id="tipoDoc">
+            <option value="opcion1">C.C. - Cédula de Ciudadanía</option>
+            <option value="opcion2">C.E. -Cédula de Extranjería</option>
+            <option value="opcion3">PS. -Pasaporte</option>
+          </select>
+
+        <input id="usuario" class="nombreUsuario" type="text" value="Número" onfocus="borrarTexto(this)">
+    </section>
+
+    <section id="seccion2">
+        <input id="contraseña" class="password" type="password" value="Contraseña" onfocus="borrarTexto1(this)">
+    </section>
+
+    <section id="seccion3">
+        <button id="botonIngreso" class="button">Ingresar ahora</button>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
