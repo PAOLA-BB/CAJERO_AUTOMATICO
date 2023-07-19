@@ -1,3 +1,4 @@
+
 function borrarTexto(input) {
   if (input.value === "Número") {
     input.value = "";
@@ -10,103 +11,51 @@ function borrarTexto1(input) {
   }
 }
 
-//alert boton 1
+// Obtén los valores de usuario y contraseña ingresados
+const usuarios = [
+  { usuario: "123456", contraseña: "contraseña1" },
+  { usuario: "456789", contraseña: "contraseña2" },
+  { usuario: "147258", contraseña: "contraseña3" }
+];
+
+
+
+//inicio código sección tusProductos.html
+// boton 2
+let saldoTotal = 0;
+
+function acumularSaldo() {
+  const monto = parseInt(prompt("Ingresar monto:"));
+  saldoTotal += monto;
+  console.log("Saldo total acumulado: ", saldoTotal);
+  alert("Ingresó: " + monto + " Saldo Total: " + saldoTotal);
+}
 // Obtener referencia al botón del DOM
-let consultarSaldo = document.getElementById("boton1");
-
-// Función para mostrar la alerta al hacer clic en el botón
-function mostrarAlerta() {
-  alert("Su saldo es de: ");
-}
-
+const btnAcumular = document.getElementById("boton2");
 // Agregar evento click al botón
-consultarSaldo.addEventListener("click", mostrarAlerta);
+btnAcumular.addEventListener("click", acumularSaldo);
 
 
-
-
-
-
-//prompt boton 2
+// boton 3
+function descontarSaldo(monto) {
+  const monto1 = parseInt(prompt("Retirar monto:"));
+  saldoTotal -= monto1;
+  console.log("Saldo total actualizado: ", saldoTotal);
+  alert("Retiró: " + monto1 + " Saldo Total: " + saldoTotal);
+}
 // Obtener referencia al botón del DOM
-let ingresarMonto = document.getElementById("boton2");
-
-function mostrarPrompt() {
-  let respuesta = parseInt(prompt("Escriba el monto a ingresar:"));
-  console.log("Respuesta: " + respuesta);
-}
+const btndescontar = document.getElementById("boton3");
 // Agregar evento click al botón
-ingresarMonto.addEventListener("click", mostrarPrompt);
+btndescontar.addEventListener("click", descontarSaldo);
 
 
-
-
-
-
-
-
-
-
-
-
-//prompt boton 3
-let retirarMonto = document.getElementById("boton3");
-function mostrarPrompt() {
-  let respuesta = prompt("Escriba el monto a retirar:");
-  console.log("Respuesta: " + respuesta);
-}  
-retirarMonto.addEventListener("click", mostrarPrompt);
-
-
-//cantidad que el usuario va a ingresar
-
-//sumar monto ingresado con saldo en ceuenta
-
-
-// Función para acumular saldo ingresado
-
-
-//cuanto saldo hay en la cuenta
-
-
-
-
-/*
-  let selectElement = document.getElementById("tipoDoc");
-  let valorSeleccionado = selectElement.value;
-  console.log(valorSeleccionado);
- 
-
-
-
-
-// Datos iniciales del cajero automático
-var saldo = 1000;
-
-// Función para retirar dinero
-function retirarDinero(cantidad) {
-  if (cantidad > saldo) {
-    console.log("Saldo insuficiente");
-  } else {
-    saldo -= cantidad;
-    console.log("Retiro exitoso. Nuevo saldo: " + saldo);
-  }
-}
-
-// Función para depositar dinero
-function depositarDinero(cantidad) {
-  saldo += cantidad;
-  console.log("Depósito exitoso. Nuevo saldo: " + saldo);
-}
-
-// Función para consultar saldo
+//boton 1
 function consultarSaldo() {
-  console.log("Saldo actual: " + saldo);
-}
+  alert("Saldo actual: " + saldoTotal);
 
-// Ejemplos de uso
-retirarDinero(500); // Retira $500 del saldo actual
-consultarSaldo(); // Muestra el saldo actual
-depositarDinero(200); // Deposita $200 en el saldo actual
-consultarSaldo(); // Muestra el saldo actual
-   */
+}
+// Obtener referencia al botón del DOM
+let btnconsultarSaldo = document.getElementById("boton1");
+// Agregar evento click al botón
+btnconsultarSaldo.addEventListener("click", consultarSaldo);
+//fin código sección tusProductos.html
